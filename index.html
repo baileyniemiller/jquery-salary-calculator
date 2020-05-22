@@ -14,11 +14,11 @@
     </header>
 
     <h2>Add Employee</h2>
-    <input type="text" id="firstName" placeholder="First Name"/>
-    <input type="text" id="lastName" placeholder="Last Name" />
-    <input type="text" id="idNumber" placeholder="ID Number" />
-    <input type="text" id="title" placeholder="Title" />
-    <input type="text" id="annualSalary" placeholder="Annual Salary" />
+    <input type="text"  placeholder="First Name" id="firstName"/>
+    <input type="text"  placeholder="Last Name" id="lastName"/>
+    <input type="number"  placeholder="ID Number" id="idNumber" />
+    <input type="text"  placeholder="Title" id="title"/>
+    <input type="number"  placeholder="Annual Salary" id="annualSalary"/>
     <button id="submitButton">Submit</button>
 
     <h2>Employees</h2>
@@ -31,20 +31,21 @@
                     <th>ID Number</th>
                     <th>Title</th>
                     <th>Annual Salary</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td id="name"></td>
-                    <td id="lName"></td>
-                    <td id="number"></td>
-                    <td id="theTitle"></td>
-                    <td id="salary"></td>
+                    <td class="name"></td>
+                    <td class="lName"></td>
+                    <td class="number"></td>
+                    <td class="theTitle"></td>
+                    <td class="salary">$</td>
                     <td><button id="delete">Delete</button></td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <h2>Total Monthly: </h2>
+    <h2 id="totalMonthly">Total Monthly: $</h2>
 </body>
 </html>
