@@ -1,15 +1,10 @@
 $(document).ready(readyNow);
 
+let total = 0;
+
 // set up ready now function
 function readyNow() {
     // when the submit button is clicked, run the addInfo function
-    // $('#submitButton').on('click', addInfo);
-    clickHandler();
-}
-
-// let salaryArray = [];
-
-function clickHandler() {
     $('#submitButton').on('click', addInfo);
 }
 
@@ -51,27 +46,35 @@ function addInfo() {
     // take the value and display it in the table
     $(newRow).append(`<td> ${salary} </td>`);
     // display it in the monthly total
-    $('#totalMonthly').append(salary);
-    // empty
+ 
+    newTotal = Number(salary) / 12;
+    total += newTotal;
+    $('#totalMonthly').empty();
+    $('#totalMonthly').append(parseInt(total));
     $('#annualSalary').val('');
+    if (total > 20000) {
+        $('h3').css('background-color', 'red');
+    }
     // push the value into the salaryArray
     // salaryArray.push($(salary));
 
     // declare button
-    let deleteButton = $(`<button id="delete">Delete</button>`);
+    let deleteButton = $(`<button class="delete">Delete</button>`);
     $(newRow).append(deleteButton);
+
+    $('.delete').on('click', function (event) {
+        const element = event.target;
+        $(element).parent().remove();
+    });
 }
 
-// function calculateTotal() {
-//     let total = 0;
-//     // loop through salary array
-//     for (let i=0; i<salaryArray.length; i++) {
-//         total += Number(salaryArray[i]);
-//     } //end for
-//     console.log('total: ', total);
-//     // add up total salaries of the array
-//     // display in total monthly
-// }
+
+
+
+
+
+
+
 
 
 // thinking it through
