@@ -2,24 +2,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Salary Calculator</title>
     <script src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
     <script src="client.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <div class="headerOne">
         <h1>Salary Calculator</h1>
+        </div>
     </header>
 
+    <div class="calculator">
     <h2>Add Employee</h2>
+    <div class="form">
     <input type="text"  placeholder="First Name" id="firstName"/>
     <input type="text"  placeholder="Last Name" id="lastName"/>
     <input type="number"  placeholder="ID Number" id="idNumber" />
     <input type="text"  placeholder="Title" id="title"/>
     <input type="number"  placeholder="Annual Salary" id="annualSalary"/>
     <button id="submitButton">Submit</button>
+    </div>
 
     <h2>Employees</h2>
     <div class="content">
@@ -35,17 +41,12 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- <tr class="information">
-                    <td id="name"></td>
-                    <td id="lName"></td>
-                    <td id="number"></td>
-                    <td id="theTitle"></td>
-                    <td id="salary">$</td>
-                    <td><button id="delete">Delete</button></td>
-                </tr> -->
+
             </tbody>
         </table>
     </div>
     <h3>Total Monthly: $ <span id="totalMonthly"></span></h3>
+    </div>
+    <h4>Copyright 2020 Bailey Niemiller</h4>
 </body>
 </html>
